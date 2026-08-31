@@ -30,8 +30,10 @@ function selectRequirement(type, element) {
 }
 
 /* ==========================================================================
-   3. CONTACT FORM & POPUP API HANDLERS (CONNECTS TO BACKEND)
+   3. CONTACT FORM & POPUP API HANDLERS (LIVE RENDER BACKEND)
    ========================================================================== */
+const BACKEND_URL = 'https://gowdaestate.onrender.com';
+
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('estateContactForm');
     if (contactForm) {
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             try {
-                const response = await fetch('http://localhost:5000/api/contact', {
+                const response = await fetch(`${BACKEND_URL}/api/contact`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -62,14 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const data = await response.json();
                 if (data.success) {
-                    alert('Thank you. Your consultation request has been reached to our desk.');
+                    alert('Thank you. Your consultation request has been emailed to our private desk executive.');
                     contactForm.reset();
                 } else {
                     alert('Submission error: ' + data.message);
                 }
             } catch (err) {
                 console.error(err);
-                alert('Could not connect to the backend server. Make sure server.js is running.');
+                alert('Could not connect to the backend server. If Render was asleep, please wait 30 seconds and try once more.');
             } finally {
                 if (submitBtn) {
                     submitBtn.innerText = originalBtnText;
@@ -92,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             try {
-                const response = await fetch('http://localhost:5000/api/contact',  {
+                const response = await fetch(`${BACKEND_URL}/api/lead-capture`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
