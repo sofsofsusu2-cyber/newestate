@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gowda Estates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar" class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="Gowda Estates Logo">
+                <span>Gowda Estates</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section class="contact-page-container">
+            <div class="contact-info-panel">
+                <h2>Get In Touch</h2>
+                <p class="panel-subtitle">Connect directly with our private advisory desk or schedule an exclusive, confidential viewing at our corporate headquarters.</p>
+                
+                <div class="info-card-item">
+                    <div class="info-card-icon">📞</div>
+                    <div class="info-card-details">
+                        <h4>Private Line</h4>
+                        <p><a href="tel:+919972578699">+91 99725 78699</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card-item">
+                    <div class="info-card-icon">✉️</div>
+                    <div class="info-card-details">
+                        <h4>Digital Concierge</h4>
+                        <p><a href="mailto:sofsofsusu2@gmail.com">sofsofsusu2@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card-item">
+                    <div class="info-card-icon">📍</div>
+                    <div class="info-card-details">
+                        <h4>Corporate Office</h4>
+                        <p><a href="https://maps.google.com" target="_blank">Devanahalli, Bengaluru, Karnataka, India</a></p>
+                    </div>
+                </div>
+
+                <div class="map-canvas-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15534.789182068993!2d77.70119335!3d13.24424915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e2c14041b659%3A0x67394593edcb855!2sDevanahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1719999999999!5m2!1sen!2sin" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <h2>Request Call Back</h2>
+                <p>Select your real estate objective path framework below to instantly route your inquiry directly to the designated specialist desk.</p>
+                
+                <div class="requirement-badge-box">
+    <div class="badge-option selected" onclick="selectRequirement('buy', this)">Acquire Asset</div>
+    <div class="badge-option" onclick="selectRequirement('sell', this)">List Property</div>
+    <div class="badge-option" onclick="selectRequirement('investment', this)">Joint Venture</div>
+</div>
+
+                <form id="estateContactForm">
+                    <input type="hidden" id="reqType" value="buy">
+
+                    <div class="form-row">
+                        <div class="floating-input-group">
+                            <input type="text" id="clientName" placeholder="Full Name" required>
+                        </div>
+                        <div class="floating-input-group">
+                            <input type="tel" id="clientPhone" placeholder="Contact Number" required>
+                        </div>
+                    </div>
+
+                    <div class="floating-input-group">
+                        <input type="email" id="clientEmail" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="floating-input-group">
+                        <textarea id="clientMessage" rows="5" placeholder="Elaborate on preferred location parameters, layout sizes, configuration details, or target budget portfolios..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-concierge-btn">Initiate Consultation</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">Gowda Estates</div>
+                <p class="footer-desc">Providing premium property consulting, bespoke structural investments, and luxury real estate advisory portfolios across Bengaluru.</p>
+                <div class="social-icons">
+                    <a href="#">📘</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📸</a>
+                </div>
+            </div>
+            <div class="footer-column links-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info-list">
+                    <li><span class="icon">📍</span><a href="https://maps.google.com" target="_blank">Devanahalli, Sector 7, Bangalore</a></li>
+                    <li><span class="icon">📞</span><a href="tel:+919972578699">+91 99725 78699</a></li>
+                    <li><span class="icon">✉️</span><a href="mailto:sofsofsusu2@gmail.com">sofsofsusu2@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Gowda Estates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
